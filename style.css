@@ -25,7 +25,6 @@
   --fsHeaderSm: clamp(3rem, 0.5rem + 3vh, 4rem);
 }
 main {
-  display: grid;
   gap: 3.2rem;
   animation: dawtop 700ms 350ms backwards;
 }
@@ -51,31 +50,19 @@ body {
     max-width: 117rem;
     padding: 0 5rem;
   }
-  main {
-    grid-template-columns: 1fr 1fr;
+  main .colum01 {
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+    gap: 40px;
+    margin-bottom: 40px;
   }
-  main {
-    grid-template-areas:
-      "A B B"
-      "C C D";
-  }
-
-  main div:nth-child(1) {
-    grid-area: A;
-  }
-
-  main div:nth-child(2) {
-    grid-area: B;
-  }
-
-  main div:nth-child(3) {
-    grid-area: C;
-  }
-
-  main div:nth-child(4) {
-    grid-area: D;
+  main .colum02 {
+    grid-template-columns: 2fr 1fr;
+    display: grid;
+    gap: 40px;
   }
 }
+
 header {
   margin: 10rem 0 8rem;
   font-family: var(--ff-heading);
